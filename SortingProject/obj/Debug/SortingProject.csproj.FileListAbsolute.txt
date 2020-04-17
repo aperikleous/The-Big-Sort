@@ -1,0 +1,11 @@
+C:\Users\alex\source\repos\MegaliParaskeui\MegaliParaskeui\bin\Debug\MegaliParaskeui.exe.config
+C:\Users\alex\source\repos\MegaliParaskeui\MegaliParaskeui\bin\Debug\MegaliParaskeui.exe
+C:\Users\alex\source\repos\MegaliParaskeui\MegaliParaskeui\bin\Debug\MegaliParaskeui.pdb
+C:\Users\alex\source\repos\MegaliParaskeui\MegaliParaskeui\obj\Debug\MegaliParaskeui.exe
+C:\Users\alex\source\repos\MegaliParaskeui\MegaliParaskeui\obj\Debug\MegaliParaskeui.pdb
+C:\Users\alex\source\repos\SortingProject\SortingProject\bin\Debug\SortingProject.exe.config
+C:\Users\alex\source\repos\SortingProject\SortingProject\bin\Debug\SortingProject.exe
+C:\Users\alex\source\repos\SortingProject\SortingProject\bin\Debug\SortingProject.pdb
+C:\Users\alex\source\repos\SortingProject\SortingProject\obj\Debug\SortingProject.csprojAssemblyReference.cache
+C:\Users\alex\source\repos\SortingProject\SortingProject\obj\Debug\SortingProject.exe
+C:\Users\alex\source\repos\SortingProject\SortingProject\obj\Debug\SortingProject.pdb
