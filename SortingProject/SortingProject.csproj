@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessoryFunctions\DelegateFunctions.cs" />
     <Compile Include="Database\MyDatabase.cs" />
     <Compile Include="Entities\Shirt.cs" />
     <Compile Include="Enumerations\Color.cs" />
@@ -52,6 +51,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sorting Algorithms\BubbleSort.cs" />
+    <Compile Include="Sorting Algorithms\BucketSort.cs" />
     <Compile Include="Sorting Algorithms\QuickSort.cs" />
   </ItemGroup>
   <ItemGroup>

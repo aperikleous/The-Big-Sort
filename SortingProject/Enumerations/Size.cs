@@ -8,6 +8,6 @@ namespace SortingProject.Enumerations
 {
     public enum Size
     {
-        XS, S, M, L, XL, XXL, XXXL
+        XS = 1, S, M, L, XL, XXL, XXXL
     }
 }

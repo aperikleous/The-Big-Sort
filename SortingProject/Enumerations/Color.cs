@@ -8,7 +8,7 @@ namespace SortingProject.Enumerations
 {
     public enum Color
     {
-        BLUE,
+        BLUE = 1,
         GREEN,
         INDIGO,
         ORANGE,

@@ -1,21 +1,35 @@
 ﻿using SortingProject.Entities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SortingProject.Sorting_Algorithms
 {
     public class QuickSort
     {
+        public static void SizeColorFabricAsc(List<Shirt> shirts)
+        {
+            SortFacade(shirts, (shirt1, shirt2) => shirt1.Fabric > shirt2.Fabric);
+
+            SortFacade(shirts, (shirt1, shirt2) => shirt1.Color > shirt2.Color);
+
+            SortFacade(shirts, (shirt1, shirt2) => shirt1.Size > shirt2.Size);
+        }
+
+        public static void SizeColorFabricDesc(List<Shirt> shirts)
+        {
+            SortFacade(shirts, (shirt1, shirt2) => shirt1.Fabric < shirt2.Fabric);
+
+            SortFacade(shirts, (shirt1, shirt2) => shirt1.Color < shirt2.Color);
+
+            SortFacade(shirts, (shirt1, shirt2) => shirt1.Size < shirt2.Size);
+        }
         /* This function takes last element as pivot, 
         places the pivot element at its correct 
         position in sorted array, and places all 
         smaller (smaller than pivot) to left of 
         pivot and all greater elements to right 
         of pivot */
-        static int partition(Shirt[] arr, int low, int high, IsSwappable orderMethod)
+        static int partition(List<Shirt> arr, int low, int high, Func<Shirt, Shirt, bool> isEligibleToSwap)
         {
             Shirt pivot = arr[high];
 
@@ -25,7 +39,7 @@ namespace SortingProject.Sorting_Algorithms
             {
                 // If current element is smaller  
                 // than the pivot 
-                if (orderMethod(pivot,arr[j]))  //Asc or Desc
+                if (isEligibleToSwap(pivot,arr[j]))  //Asc or Desc
                 {
                     i++;
 
@@ -43,28 +57,28 @@ namespace SortingProject.Sorting_Algorithms
 
             return i + 1;
         }
-
-        public static void SortFacade (Shirt[] arr,IsSwappable orderMethod)
+        
+        public static void SortFacade (List<Shirt> arr, Func<Shirt, Shirt, bool> isEligibleToSwap)
         {
-            QuickSort.SortAll(arr, 0, arr.Length - 1, orderMethod);
+            SortAll(arr, 0, arr.Count - 1, isEligibleToSwap);
         }
         /* The main function that implements QuickSort() 
         arr[] --> Array to be sorted, 
         low --> Starting index, 
         high --> Ending index */
-        public static void SortAll(Shirt[] arr, int low, int high, IsSwappable orderMethod)
+        public static void SortAll(List<Shirt> arr, int low, int high, Func<Shirt, Shirt, bool> isEligibleToSwap)
         {
             if (low < high)
             {
 
                 /* pi is partitioning index, arr[pi] is  
                 now at right place */
-                int pi = partition(arr, low, high, orderMethod);
+                int pi = partition(arr, low, high, isEligibleToSwap);
 
                 // Recursively sort elements before 
                 // partition and after partition 
-                SortAll(arr, low, pi - 1, orderMethod);
-                SortAll(arr, pi + 1, high, orderMethod);
+                SortAll(arr, low, pi - 1, isEligibleToSwap);
+                SortAll(arr, pi + 1, high, isEligibleToSwap);
             }
         }
     }
